@@ -1,0 +1,34 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('admin', 'user') NOT NULL
+);
+
+
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    birth_date DATE NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    position VARCHAR(50) NOT NULL,
+    salary DECIMAL(10, 2) NOT NULL,
+    contract_type VARCHAR(50) NOT NULL
+);
+
+INSERT INTO employees (first_name, last_name, birth_date, email, position, salary, contract_type) VALUES
+('Zouhair', 'Jakani', '1977-01-12', 'zouhair.jakani@example.com', 'Développeur', 80000, 'Temps partiel'),
+('Saadia', 'Er Raoui', '1978-05-10', 'saadia.erraoui.elamrani@example.com', 'Développeur Junior', 30000, 'Stage'),
+('Mohamed', 'El Amrani', '1980-01-01', 'mohamed.elamrani@example.com', 'Développeur', 50000, 'Temps plein'),
+('Sanaa', 'Brahimi', '1985-05-15', 'sanaa.brahimi@example.com', 'Designer', 45000, 'Temps partiel'),
+('Youssef', 'Bennani', '1990-08-20', 'youssef.bennani@example.com', 'Responsable', 60000, 'Temps plein'),
+('Meryem', 'El Khoury', '1992-12-30', 'meryem.elkhoury@example.com', 'Analyste', 55000, 'Contrat'),
+('Rachid', 'Fassi', '1988-03-10', 'rachid.fassi@example.com', 'Testeur', 48000, 'Temps plein'),
+('Khadija', 'Benali', '1991-07-25', 'khadija.benali@example.com', 'Ressources humaines', 52000, 'Temps plein'),
+('Abdelkader', 'Zeroual', '1987-04-12', 'abdelkader.zeroual@example.com', 'Marketing', 53000, 'Temps partiel'),
+('Karim', 'Jabbari', '1993-09-18', 'karim.jabbari@example.com', 'Ventes', 51000, 'Contrat'),
+('Omar', 'El Bouhali', '1989-11-05', 'omar.elbouhali@example.com', 'Support', 49000, 'Temps plein'),
+('Laila', 'Zerhouni', '1994-02-22', 'laila.zerhouni@example.com', 'Informatique', 54000, 'Temps plein'),
+('Amine', 'Chafik', '1986-06-30', 'amine.chafik@example.com', 'Finance', 56000, 'Temps partiel'),
+('Zineb', 'Ait Ali', '1995-10-08', 'zineb.aitali@example.com', 'Opérations', 57000, 'Contrat');
